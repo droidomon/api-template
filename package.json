@@ -6,7 +6,10 @@
   "scripts": {
     "start": "node ./js/src/index.js",
     "dev": "SET NODE_ENV=dev & nodemon -r tsconfig-paths/register ts/src/index.ts",
-    "test": "SET NODE_ENV=test & mocha --check-leaks -r tsconfig-paths/register -r ts-node/register ts/test/**/*.test.ts -w"
+    "test": "SET NODE_ENV=test & mocha --check-leaks -r tsconfig-paths/register -r ts-node/register ts/test/**/*.test.ts",
+    "test:watch": "SET NODE_ENV=test & mocha --check-leaks -r tsconfig-paths/register -r ts-node/register ts/test/**/*.test.ts -w",
+    "build": "tsc",
+    "build:watch": "tsc -w"
   },
   "author": "",
   "license": "ISC",
